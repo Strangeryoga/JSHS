@@ -1,0 +1,37 @@
+package org.jsp.Company_Details.dto;
+
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+
+@Entity
+public class Employee_dto {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
+	private String ename;
+	private String address;
+	private long contactno;
+	
+	@ManyToOne(cascade = CascadeType.ALL)
+	private Company_dto company;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	private Computer_dto computer;
+	
+	@OneToMany(cascade = CascadeType.ALL)
+	private List<Skills_dto> list;
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,19 @@
+package org.jsp.spring_boot_demo_app.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class Demo_Controller {
+    
+	@GetMapping("/get")
+	public String getMsg() {
+		return "hello I am getMsg()";
+	}
+	
+	@PostMapping("/tejas")
+	public void postMsg() {
+		System.out.println("hello i am postMSg()");
+	}
+}

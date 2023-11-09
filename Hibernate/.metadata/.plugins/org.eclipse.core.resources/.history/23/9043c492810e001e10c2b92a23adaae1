@@ -1,0 +1,8 @@
+package com.ty.composite_key.dto;
+
+import javax.persistence.Embeddable;
+
+@Embeddable
+public class Flipkart_Id {
+
+}

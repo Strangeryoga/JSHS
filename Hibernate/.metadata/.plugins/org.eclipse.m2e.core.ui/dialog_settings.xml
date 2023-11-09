@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\tejas\OneDrive\Desktop\FrameWork\abc\target\m2e-wtp\web-resources\META-INF\persistence.xml"/>
+			<item value="C:\Users\tejas\OneDrive\Desktop\FrameWork\manytoone_uni1\src\main\java\org\jsp\Bulding_Rooms_controller\Bulding_Rooms_controller.java"/>
+			<item value="C:\Users\tejas\OneDrive\Desktop\FrameWork\manytoone_uni\src\main\java\org\jsp\manytoone_uni\controller\Dept_Emp_controller.java"/>
+			<item value="C:\Users\tejas\OneDrive\Desktop\FrameWork\bike_wala"/>
+			<item value="C:\Users\tejas\OneDrive\Desktop\FrameWork\oneToMany_uni\src\main\java\org\jsp\oneToMany_uni\controller\Flipkart_Items_Controller.java"/>
+			<item value="C:\Users\tejas\OneDrive\Desktop\FrameWork\onetoone_bi\src\main\java\org\jsp\onetoone_bi\controller\Car_Eng_Controller.java"/>
+			<item value="C:\Users\tejas\OneDrive\Desktop\FrameWork\onetoone_bi\src\main\java\org\jsp\onetoone_bi\dto\Car.java"/>
+			<item value="C:\Users\tejas\OneDrive\Desktop\FrameWork\student\src\main\java\org\jsp\student\controller\Student_Controller.java"/>
+			<item value="C:\Users\tejas\OneDrive\Desktop\FrameWork\Car_wala\src\main\java\org\aim\Car_wala\Car.java"/>
+			<item value="C:\Users\tejas\OneDrive\Desktop\FrameWork\bike_wala\src\main\java\org\jsp\bike_wala\Bike.java"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="com.student_management"/>
+			<item value="com.student_management_system.dao"/>
+			<item value="org.jsp"/>
+			<item value="com.ty"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="studentmange"/>
+			<item value="Student_management"/>
+			<item value="mapping"/>
+			<item value="caching"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item key="width" value="480"/>
+		<item key="height" value="667"/>
+		<item key="x" value="720"/>
+		<item key="y" value="67"/>
+	</section>
+</section>

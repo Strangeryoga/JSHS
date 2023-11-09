@@ -1,0 +1,14 @@
+package org.jsp.spring_ioc_annotation_container_constructor_injector.animal;
+
+import org.jsp.spring_ioc_annotation_container_setter_injector.animal.Animal_Sound;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class AnimalDriver {
+	public static void main(String[] args) {
+		ApplicationContext context=new AnnotationConfigApplicationContext("Animal1.xml");
+		Animal_Sound as=context.getBean("animal_Sound",Animal_Sound.class);
+		as.details();
+	}
+
+}

@@ -1,0 +1,64 @@
+package com.ty.s;
+
+import java.beans.Statement;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/lu")
+public class LU extends HttpServlet {
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		String username=req.getParameter("un");
+		String password=req.getParameter("ps");
+		
+		try{
+			Class.forName("com.mysql.jdbc.Driver");
+			System.out.println("connection establishe");
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306?user=root&password=root");
+			System.out.println("passwordmatch");
+			Statement stmt=(Statement) con.createStatement();
+			String sql="select * from form";
+
+			ResultSet rs=((java.sql.Statement) stmt).executeQuery(sql);
+			while(rs.next()) {
+				
+							
+				String name=rs.getString(1);
+				String email=rs.getString(2);
+				String user=rs.getString(3);
+				String Password=rs.getString(4);
+				
+				if(Password.equals("ps")) {
+					PrintWriter ref=resp.getWriter();
+					ref.print("<html><body><h1>Welcome</h1></body></html>");
+				}else {
+					System.out.println("compiler error");
+				}
+			}
+			
+		}
+			
+			catch(Exception e){
+				System.out.println("error");
+			}
+
+		
+		
+		
+		
+	}
+
+}

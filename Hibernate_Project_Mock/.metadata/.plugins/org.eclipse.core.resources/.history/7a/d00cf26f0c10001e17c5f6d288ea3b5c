@@ -1,0 +1,24 @@
+package org.jsp.Company_Details.dto;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+@Entity
+public class Address_dto {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
+	private long pcode;
+	private String state;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	private Company_dto company;
+	
+	
+	
+}

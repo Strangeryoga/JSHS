@@ -1,0 +1,10 @@
+package com.example.demo.repo;
+
+import org.springframework.stereotype.Repository;
+import com.example.demo.dto.Customer_dto;
+
+
+@Repository
+public interface CustomerRepo extends JpaRepository<Customer_dto, Long> {
+
+}

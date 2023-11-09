@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>FirstWebApp</display-name>
+  
+  
+  <!--  configuration of html file in web.xml file -->
+  
+  <welcome-file-list>
+    <welcome-file>killer.html</welcome-file> 
+  </welcome-file-list>
+  
+  <!--  configuration of servlet in web.xml -->
+  <servlet-mapping>
+  <servlet-name>DemoServlet</servlet-name>
+  <url-pattern>/demo</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>DemoServlet</servlet-name>
+  <servlet-class>com.ty.firstServlet.DemoServlet</servlet-class>
+  
+  </servlet>
+  
+</web-app>

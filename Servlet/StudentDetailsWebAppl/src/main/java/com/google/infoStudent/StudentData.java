@@ -1,0 +1,40 @@
+package com.google.infoStudent;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
+import javax.servlet.GenericServlet;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+
+
+
+public class StudentData extends GenericServlet {
+
+	@Override
+	public void service(ServletRequest req, ServletResponse resp) throws ServletException, IOException {
+		int id=Integer.parseInt(req.getParameter("id"));
+		
+		String name=req.getParameter("nm");
+		String place=req.getParameter("pl");
+		
+		System.out.println("id is"+id+"and name is"+name+"place is"+place);
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306?user=root&password=root");
+			PreparedStatement ps=con.prepareStatement("insert into info.student values(?,?,?)");
+			ps.setInt(1, id);
+			ps.setString(2, name);
+			ps.setString(3, place);
+			ps.executeUpdate();
+			
+		} catch (Exception e) {
+			System.out.println("handled");
+		}
+	}
+
+}

@@ -1,0 +1,67 @@
+package org.jsp.oneToMany_uni.controller;
+
+import java.util.*;
+
+import org.jsp.oneToMany_uni.dao.FilpKart_Items_Dao;
+import org.jsp.oneToMany_uni.dto.Flipkart_Customer;
+import org.jsp.oneToMany_uni.dto.Items;
+
+public class Flipkart_Items_Controller {
+
+	public static void main(String[] args) {
+		Flipkart_Customer FC=new Flipkart_Customer();
+		FC.setId(1);
+		FC.setName("killer");
+		FC.setEmail("abcdefg@gmail.com");
+		FC.setNumber(9429384938l);
+		
+		Items items=new Items();
+		items.setId(104);
+		items.setName("clothes");
+		items.setCost(8989);
+		items.setQuantity(3);
+		
+		Items items1=new Items();
+		items1.setId(105);
+		items1.setName("tv");
+		items1.setCost(8989);
+		items1.setQuantity(3);
+		
+		Items items2=new Items();
+		items2.setId(106);
+		items2.setName("glass");
+		items2.setCost(8989);
+		items2.setQuantity(3);
+		
+		
+		
+//		List<Items> list=new ArrayList<Items>();
+//		
+//		list.remove(items);
+//		list.remove(items1);
+//		list.remove(items2);
+//		FC.setItems(list);
+		
+		FilpKart_Items_Dao fid=new FilpKart_Items_Dao();
+		
+//		fid.saveFlipkarCustomer(FC);
+//		fid.updateFlipkarCustomer(FC);
+//		fid.addKart(1, list);
+		
+//		fid.removeKart(1, list);
+		
+		Items items3=new Items();
+		items2.setId(109);
+		items2.setName("glass");
+		items2.setCost(8989);
+		items2.setQuantity(3);
+		
+		
+		
+		List<Items> li=new ArrayList<Items>();
+		li.add(items3);
+		
+		fid.addKart(1, li);
+		
+	}
+}

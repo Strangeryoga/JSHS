@@ -1,0 +1,15 @@
+package com.student.student_app.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+
+public class Student_Controller {
+	
+	@GetMapping("/stu")
+	public String getStudent() {
+		return "This is student speaking";
+	}
+	
+	
+	
+
+}

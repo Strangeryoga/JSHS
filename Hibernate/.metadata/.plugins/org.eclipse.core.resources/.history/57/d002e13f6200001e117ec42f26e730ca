@@ -1,0 +1,89 @@
+package onetoone_unique.dao;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import onetoone_unique.dto.Passport;
+import onetoone_unique.dto.Person;
+
+public class Person_Passport_Dao {
+	
+	public void savePerson(Person person) {
+		EntityManagerFactory factory=Persistence.createEntityManagerFactory("d1");
+		EntityManager manager= factory.createEntityManager();
+		EntityTransaction transaction=manager.getTransaction();
+		
+		transaction.begin();
+		manager.persist(person);
+		transaction.commit();
+		
+	}
+	
+	public void savePassport(Passport passport) {
+		EntityManagerFactory factory=Persistence.createEntityManagerFactory("d1");
+		EntityManager manager= factory.createEntityManager();
+		EntityTransaction transaction=manager.getTransaction();
+		
+		transaction.begin();
+		manager.persist(passport);
+		transaction.commit();
+	}
+	
+	public void update(Person person) {
+		EntityManagerFactory factory=Persistence.createEntityManagerFactory("d1");
+		EntityManager manager= factory.createEntityManager();
+		EntityTransaction transaction=manager.getTransaction();
+		
+		transaction.begin();
+		manager.merge(person);
+		transaction.commit();
+	}
+	
+	public void updatePassport(Passport passport) {
+		EntityManagerFactory factory=Persistence.createEntityManagerFactory("d1");
+		EntityManager manager= factory.createEntityManager();
+		EntityTransaction transaction=manager.getTransaction();
+		
+		transaction.begin();
+		manager.merge(passport);
+		transaction.commit();
+	}
+	
+	public void findPerson(int id) {
+		
+		EntityManagerFactory factory=Persistence.createEntityManagerFactory("d1");
+		EntityManager manager= factory.createEntityManager();
+		EntityTransaction transaction=manager.getTransaction();
+		
+		transaction.begin();
+		Person per = manager.find(Person.class, id );
+		if(per!=null) {
+			System.out.println(per);
+		}
+		else {
+			System.out.println("Not found");
+		}
+
+		transaction.commit();
+	}
+	
+	public void removePerson(int id) {
+		
+		EntityManagerFactory factory=Persistence.createEntityManagerFactory("d1");
+		EntityManager manager=factory.createEntityManager();
+		EntityTransaction transaction=manager.getTransaction();
+		Person per = manager.find(Person.class, id );
+		
+		transaction.begin();
+		manager.remove(per);
+		if(per!=null) {
+			System.out.println(per);
+		}
+		else {
+			System.out.println("Not found");
+		}
+	}
+
+}

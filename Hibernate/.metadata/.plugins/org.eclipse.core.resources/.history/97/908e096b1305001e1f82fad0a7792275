@@ -1,0 +1,5 @@
+package org.jp.onetomany_bi.dao;
+
+public class Comp_Emp_Dao {
+
+}

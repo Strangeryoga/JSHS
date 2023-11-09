@@ -1,0 +1,13 @@
+package org.jsp.companyDetails.dao;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+public class CompanyDetails_dao {
+
+	EntityManagerFactory factory=Persistence.createEntityManagerFactory("map");
+	EntityManager manager=factory.createEntityManager();
+	EntityTransaction transaction=manager.getTransaction();
+}

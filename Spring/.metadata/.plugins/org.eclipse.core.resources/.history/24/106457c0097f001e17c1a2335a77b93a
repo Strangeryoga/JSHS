@@ -1,0 +1,63 @@
+package dev.strange.movies;
+
+import java.util.List;
+
+import java.util.Optional;
+
+import org.bson.types.ObjectId;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import dev.strange.movies.MovieService;
+import dev.strange.movies.Movie;
+
+@RestController
+public class MovieController {
+   
+//	@Autowired
+//	private MovieService service;
+//
+//	public MovieController(MovieService service) {
+//		this.service = service;
+//	}
+
+	//	@GetMapping
+//	public ResponseEntity<List<Movie>> getMovies() {
+//		return new ResponseEntity<List<Movie>>(service.findAllMovies(),HttpStatus.OK);
+//	}
+
+//	@PostMapping("/product1")
+//	public ResponseEntity<Movie> createMovie(@RequestBody Movie movie){
+//		return ResponseEntity.ok(this.service.save(movie));
+//	}
+
+//	@GetMapping("/{imdbId}")
+//	public ResponseEntity<Optional<Movie>> getSingleMovie(@PathVariable String imdbId){
+//		return new ResponseEntity<Optional<Movie>>(movieService.findMovieByImdbId(imdbId),HttpStatus.OK);
+//	}
+
+	private final MovieRepository movierepo;
+
+	public MovieController(MovieRepository movierepo) {
+		this.movierepo = movierepo;
+	}
+
+	@GetMapping("/yoyo")
+	public ResponseEntity<List<Movie>> getAllMovies(){
+		return ResponseEntity.ok(this.movierepo.findAll());
+	}
+
+	@PostMapping("/yoyo")
+	public ResponseEntity<Movie> createMovie(@RequestBody MovieRequest request){
+		Movie movie=new Movie(null, null);
+		movie.setImdbId(request.getImdbid());
+		movie.setTitle(request.getTitle());
+
+		return ResponseEntity.status(201).body(this.movierepo.save(movie));
+	}
+
+
+
+}

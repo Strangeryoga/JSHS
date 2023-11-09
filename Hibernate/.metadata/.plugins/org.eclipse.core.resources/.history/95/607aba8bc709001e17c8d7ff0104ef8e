@@ -1,0 +1,5 @@
+package org.jsp.Bulding_Rooms_dto;
+
+public class Bulding {
+
+}

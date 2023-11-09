@@ -1,0 +1,9 @@
+package org.jsp.Company_Details.dao;
+
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+public class Company_Details_dao {
+
+	EntityManagerFactory factory=Persistence.createEntityManagerFactory("yoyo")
+}

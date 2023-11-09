@@ -1,0 +1,12 @@
+package org.jsp.spring_ioc_container;
+
+public class Bike {
+
+	private void start() {
+		System.out.println("bike started");
+	}
+	
+	private void stop() {
+		System.out.println("bike stopped");
+	}
+}

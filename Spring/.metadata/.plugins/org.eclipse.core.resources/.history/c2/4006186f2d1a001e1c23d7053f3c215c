@@ -1,0 +1,16 @@
+package org.jsp.spring_ioc_annotation_container_constructor_injector.animal;
+
+public class AnimalSound {
+	
+	private Animal animal;
+
+	public AnimalSound(Animal animal) {
+		super();
+		this.animal = animal;
+	}
+	
+	public void Details() {
+		animal.doSound();
+	}
+
+}

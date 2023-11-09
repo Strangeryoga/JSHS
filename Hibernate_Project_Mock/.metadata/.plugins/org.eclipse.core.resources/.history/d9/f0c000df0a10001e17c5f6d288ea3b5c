@@ -1,0 +1,19 @@
+package org.jsp.Company_Details.dto;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Company_dto {
+	@Id
+	private int id;
+	private String name;
+	private String email;
+	private String loc;
+	private long mno;
+	
+	private Address_dto address;
+	private Employee_dto employee;
+	
+
+}

@@ -1,0 +1,38 @@
+package org.jp.onetomany_bi.controller;
+
+import org.jp.onetomany_bi.dto.Company;
+import org.jp.onetomany_bi.dto.Employee;
+
+public class Comp_Emp_Controller {
+
+	public static void main(String[] args) {
+		
+		Company company=new Company();
+		company.setCid(101);
+		company.setCname("TCS");
+		company.setAddress("mumbai");
+		company.setEmail("tcs@gmail.com");
+		company.setMno(8293829l);
+		
+		Employee employee=new Employee();
+		employee.setEid(1001);
+		employee.setEname("Roshan");
+		employee.setSal(89348);
+		employee.setAddress("delhi");
+		employee.setCompany(company);
+		
+		Employee employee1=new Employee();
+		employee1.setEid(1002);
+		employee1.setEname("killer");
+		employee1.setSal(893483);
+		employee1.setAddress("mumbai");
+		employee1.setCompany(company);
+		
+		Employee employee2=new Employee();
+		employee2.setEid(1003);
+		employee2.setEname("stranger");
+		employee2.setSal(893483);
+		employee2.setAddress("uk");
+		employee2.setCompany(company);
+	}
+}

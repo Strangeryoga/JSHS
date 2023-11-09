@@ -1,0 +1,23 @@
+package org.jsp.Bulding_Rooms_controller;
+
+import org.jsp.Bulding_Rooms_dto.Bulding;
+import org.jsp.Bulding_Rooms_dto.Rooms;
+
+public class Bulding_Rooms_controller {
+
+	public static void main(String[] args) {
+		Bulding bl=new Bulding();
+		bl.setName("JSpi");
+		bl.setAddress("near thane station");
+		
+		
+		Rooms rm=new Rooms();
+		rm.setRname("marine drive");
+		rm.setAddress("2nd floor");
+		rm.setPhoneno(382938982);
+		
+		
+		
+		bl.setRm(null);
+	}
+}

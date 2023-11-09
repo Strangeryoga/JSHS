@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form action="h1" method="post">
+<h1>1. Youtube</h1>
+<h1>2. FaceBook</h1>
+<h1>3. Twitter</h1>
+<h2>Enter the number</h2>
+number<input type="text" name="num1">
+<button>Click me</button>
+</form>
+</body>
+</html>

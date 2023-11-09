@@ -1,0 +1,20 @@
+package org.jsp.spring_ioc_container;
+
+public class Pen {
+	
+	private void buy() {
+		System.out.println("you buy this pen");
+
+	}
+	
+	private void write() {
+		System.out.println("you are writing");
+
+	}
+	
+	private void draw() {
+		System.out.println("you can draw");
+
+	}
+
+}

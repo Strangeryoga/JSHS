@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>Login</h1>
+<form action="LoginServlet" method="post">
+name<input type="text" name="ui">
+mobile<input type="text" name="ps">
+date<input type="date" name="dt">
+<button type="submit">Login</button>
+</form>
+</body>
+</html>

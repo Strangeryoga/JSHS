@@ -1,0 +1,67 @@
+package org.jsp.Bulding_Rooms_dto;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
+public class Bulding {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int bid;
+	private String name;
+	private String address;
+	
+	
+	@ManyToOne(cascade = CascadeType.ALL)
+	private Rooms rm;
+
+
+	public int getBid() {
+		return bid;
+	}
+
+
+	public void setBid(int bid) {
+		this.bid = bid;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public String getAddress() {
+		return address;
+	}
+
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+
+	public Rooms getRm() {
+		return rm;
+	}
+
+
+	public void setRm(Rooms rm) {
+		this.rm = rm;
+	}
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,2 @@
+spring.data.mongodb.database=movies-api-db
+spring.data.mongodb.url=mongodb+srv://stalefold37:4Rw0aAn4ll7TOEbA@cluster0.t5byqff.mongodb.net

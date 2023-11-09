@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\Users\tejas\OneDrive\Desktop\FrameWork\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1585888217.index
+4104150974.index
+3306796187.index
+511612229.index
+4238974959.index
+1794832342.index
+2191942276.index

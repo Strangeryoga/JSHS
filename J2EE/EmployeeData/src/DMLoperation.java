@@ -1,0 +1,45 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class DMLoperation {
+	public static void main(String[] args) {
+		
+		try {
+//			Class.forName("com.mysql.cj.jdbc.Driver");
+			System.out.println("connection established");
+			
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306?user=root&password=root");
+			
+			Statement stmt=con.createStatement();
+			
+//			stmt.executeUpdate("insert into emp_info.employee values(333, 'Sandip', 'Developer', 'Washington')");
+//			stmt.executeUpdate("insert into info.student values(20, 'Aniket', 'Alibagh')");
+//			stmt.executeUpdate("delete from  emp_info.employee where id=356");
+			
+//			ResultSet res=stmt.executeQuery("Select * from emp_info.employee ");
+			ResultSet res=stmt.executeQuery("Select * from emp_info.employee where id=17");
+			
+			
+			while(res.next()) {
+				int id=res.getInt(1);
+				String name=res.getString(2);
+				String role=res.getString(3);
+				String place=res.getString(4);
+				
+				System.out.println(id+" "+name+" from "+place);
+			
+			}
+			
+			//Write a JdBC code to print the particular ros
+			
+			
+		
+		} catch (Exception e) {
+			System.out.println("Hii buddy");
+			
+		}
+	}
+
+}

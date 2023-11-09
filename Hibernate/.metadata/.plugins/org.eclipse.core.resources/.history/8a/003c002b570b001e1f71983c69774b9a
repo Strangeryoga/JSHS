@@ -1,0 +1,5 @@
+package com.ty.manytomany_bi.dao;
+
+public class Student_Course_dao {
+
+}

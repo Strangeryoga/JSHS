@@ -1,0 +1,8 @@
+package com.ty.formApp;
+
+import javax.servlet.*;
+
+public class UIServlet extends GenericServlet
+{
+
+}

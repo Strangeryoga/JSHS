@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body bgcolor="purple">
+<form action="">
+Name:<input type="text" placeholder="Enter name">
+Idea:<input type="text" placeholder="Enter idea">
+<br>
+<button>Yes</button>
+<button>No</button>
+
+
+</form>
+
+
+
+</body>
+</html>

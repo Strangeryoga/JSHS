@@ -1,0 +1,34 @@
+import java.sql.*;
+
+//Write a JDBC code to insert the records in multiple database
+public class EmployeeInformation {
+	public static void main(String[] args) {
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			System.out.println("Driver class loaded and register");
+			
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306?user=root&password=root");
+			System.out.println("Connection established");
+			
+			Statement stmt=con.createStatement();
+			System.out.println("Platform created");
+			
+			
+//			stmt.executeUpdate("insert into emp_info.employee values(356, 'John', 'developer' , 'USA') ");
+//			stmt.executeUpdate("insert into emp_info.employee values(357, 'Akii', 'SQl developer' , 'New Jersey') ");
+//			stmt.executeUpdate("insert into emp_info.employee values(358, 'Ragnar', 'Frontend Dev' , 'Greenland') ");
+//			stmt.executeUpdate("insert into emp_info.employee values(359, 'Thomas', 'Gangster' , 'London') ");
+           // stmt.executeUpdate("update emp_info.employee set e_name='Stranger' where id=357");
+			stmt.executeUpdate("delete emp_info.employee where id=358");
+            
+		
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("buddy");
+		}
+		
+	}
+
+}

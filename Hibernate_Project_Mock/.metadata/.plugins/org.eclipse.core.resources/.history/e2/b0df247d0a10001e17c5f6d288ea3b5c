@@ -1,0 +1,14 @@
+package org.jsp.Company_Details.dto;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Employee_dto {
+
+	private int id;
+	private String ename;
+	private String address;
+	private long contactno;
+	
+	
+}

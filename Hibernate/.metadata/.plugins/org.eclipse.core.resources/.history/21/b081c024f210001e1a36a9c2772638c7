@@ -1,0 +1,30 @@
+package org.jsp.companyDetails.controller;
+
+import org.jsp.companyDetails.dto.Company;
+import org.jsp.companyDetails.dto.Employee;
+
+public class CompanyDetails_controller {
+
+	public static void main(String[] args) {
+		Company company=new Company();
+		company.setName("salesforce");
+		company.setLoc("uk");
+		company.setMno(9009230l);
+		
+		
+		
+		
+		Employee employee1=new Employee();
+		employee1.setName("shree");
+		employee1.setAddress("mumbai");
+		employee1.setCompany(company);
+		
+		Employee employee2=new Employee();
+		employee2.setName("kali");
+		employee2.setAddress("kaliyug");
+		employee2.setCompany(company);
+		
+		
+		company.setList(null);
+	}
+}

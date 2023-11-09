@@ -1,0 +1,41 @@
+package org.jsp.manytomany_uni.controller;
+
+import java.util.List;
+
+import org.jsp.manytomany_uni.dao.Customer_Product_dao;
+import org.jsp.manytomany_uni.dto.Customer;
+import org.jsp.manytomany_uni.dto.Product;
+
+public class Customer_Product_controller {
+
+
+	public static void main(String[] args) {
+		Customer c=new Customer();
+		c.setName("yogesh");
+		c.setAddress("thane");
+		c.setMobileno(8394893l);
+		
+		
+		List<Product> p=(List<Product>) new Product();
+		((Product) p).setName("mobile");
+		((Product) p).setCost(83839);
+		
+		List<Product> p1=(List<Product>) new Product();
+		((Product) p1).setName("umbrella");
+		((Product) p1).setCost(199);
+		
+		List<Product> p2=(List<Product>) new Product();
+		((Product) p2).setName("laptop");
+		((Product) p2).setCost(838393);
+		
+		
+		
+		c.setProduct( p);
+		c.setProduct( p1);
+		c.setProduct( p2);
+		
+		Customer_Product_dao dao=new Customer_Product_dao();
+		dao.saveCustomer(c);
+
+	}
+}

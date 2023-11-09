@@ -1,0 +1,13 @@
+package org.jsp.spring_boot_demo_app.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class Demo_Controller {
+    
+	@GetMapping("/hi")
+	public String getMsg() {
+		return "hello I am getMsg()";
+	}
+}

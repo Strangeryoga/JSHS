@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form action="signUp.jsp">
+Name<input type="text">
+Email<input type="text">
+Username<input type="text">
+Password<input type="text">
+<button>Login</button>
+</form>
+
+</body>
+</html>

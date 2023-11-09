@@ -1,0 +1,14 @@
+package com.ty.composite_key;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Flipkart {
+	
+	private String name;
+	private String pwd;
+	private String address;
+	
+	
+
+}

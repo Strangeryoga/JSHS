@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+ <h2>Customer Details</h2>
+ 
+ <form action="" method="post" modelAttribute="dt">
+ 	<input type="text" name="firstName" placeholder="First Name"/>
+ 	<input type="text" name="lastName" placeholder="Last Name"/>
+ 	<input type="text" name="street" placeholder="Street"/>
+ 	<input type="text" name="address" placeholder="Address"/>
+ 	<input type="text" name="city" placeholder="City"/>
+ 	<input type="text" name="state" placeholder="State"/>
+ 	<input type="email" name="email" placeholder="Email"/>
+ 	<input type="text" name="phone" placeholder="Phone"/>
+ 	<button>Submit</button>
+ </form>
+
+</body>
+</html>

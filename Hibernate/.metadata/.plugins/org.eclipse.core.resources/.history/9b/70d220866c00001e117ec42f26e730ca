@@ -1,0 +1,5 @@
+package onetoone_bi.dto;
+
+public class Car {
+
+}

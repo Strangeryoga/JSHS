@@ -1,0 +1,82 @@
+package com.example.demo.controller;
+
+import java.util.List;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import com.example.demo.dto.Customer_dto;
+import com.example.demo.dto.Login;
+import com.example.demo.service.CustomerService;
+import org.springframework.ui.Model;
+
+//@RestController
+//@RequestMapping("/CD")
+@Controller
+public class LoginController {
+	
+	@Autowired
+    private CustomerService customerService;
+	@RequestMapping(value="/get_customer_list", method=RequestMethod.GET)
+	public ResponseEntity< List<Customer_dto>> getAllCustomer(){
+		return new ResponseEntity<List<Customer_dto>>(CustomerService.getAllCustomers(),HttpStatus.OK);
+	}
+	
+	@RequestMapping({"/login", "details2"})
+	public String getAllCustomer(Model model,@ModelAttribute("message")String message){
+		model.addAttribute("list",customerService.getAllCustomers());
+		model.addAttribute("message",message);
+		return "details2";
+	}
+	
+	@RequestMapping(value="/get_customer_list/{id}", method=RequestMethod.GET)
+	public Customer_dto getCustomerDetails(@PathVariable Long id) {
+		return CustomerService.getCustomerDetails(id);
+	}
+	
+//	@PostMapping("/create")
+//	public ResponseEntity< Customer_dto> addCustomer(@RequestBody Customer_dto customer) {
+//		return new ResponseEntity<Customer_dto> (CustomerService.addCustomer(customer),HttpStatus.CREATED);
+//	}
+	
+	@RequestMapping(value="/addToCustomer", method=RequestMethod.GET)
+	public String addToCustomer(Model model) {
+		Customer_dto dt=new Customer_dto();
+		model.addAttribute("dt", dt);
+		return "details";
+	}
+	
+	@PostMapping("/saveToCustomer")
+	public String saveToCustomer(@ModelAttribute("dt") Customer_dto customer, RedirectAttributes redirect) {
+		System.out.println(customer);
+		return "redirect:/login";
+	}
+	
+	
+	
+	@PutMapping("/update/{id}")
+	public Customer_dto updateCustomer(@PathVariable Long id,@RequestBody Customer_dto customer) {
+		return CustomerService.updateCustomer(id,customer);
+	}
+	
+	@DeleteMapping("/delete/{id}")
+	public Customer_dto deleteCustomer(@PathVariable Long id) {
+		return CustomerService.deleteCustomer(id);
+	}
+	
+	
+	
+}

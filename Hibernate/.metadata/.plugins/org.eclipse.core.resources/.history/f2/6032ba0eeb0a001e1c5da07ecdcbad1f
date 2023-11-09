@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form action="det" method="post">
+
+Name<input type="text">
+Address<input type="text">
+Phoneno<input type="number">
+Email<input type="email">
+
+<button>submit</button>
+
+
+</form>
+
+
+</body>
+</html>

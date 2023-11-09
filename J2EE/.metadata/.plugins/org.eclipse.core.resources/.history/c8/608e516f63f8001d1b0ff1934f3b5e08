@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form action="h1">
+<h1>Hello</h1>
+<button>Ok</button>
+</form>
+</body>
+</html>

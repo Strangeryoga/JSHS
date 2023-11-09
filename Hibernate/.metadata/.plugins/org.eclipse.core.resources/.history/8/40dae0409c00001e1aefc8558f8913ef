@@ -1,0 +1,5 @@
+package org.jsp.one_to_one_bi_dto;
+
+public class Car {
+
+}

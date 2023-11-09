@@ -1,0 +1,14 @@
+package com.p1.ExcelToMysql.entity;
+
+
+
+public class Player {
+
+	private Integer playerId;
+	private String playerName;
+	private String playerAge;
+	private String playerNetWorth;
+	
+	
+	
+}

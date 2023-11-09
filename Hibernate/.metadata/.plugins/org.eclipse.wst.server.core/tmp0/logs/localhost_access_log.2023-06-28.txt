@@ -1,0 +1,11 @@
+127.0.0.1 - - [28/Jun/2023:01:00:15 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [28/Jun/2023:01:00:19 +0530] "GET /Student_Management_System/AdminLogin.jsp HTTP/1.1" 200 1197
+0:0:0:0:0:0:0:1 - - [28/Jun/2023:01:00:19 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [28/Jun/2023:01:00:36 +0530] "GET /Student_Management_System/AdminSignUp.jsp HTTP/1.1" 200 1242
+0:0:0:0:0:0:0:1 - - [28/Jun/2023:01:00:44 +0530] "GET /Student_Management_System/Dashboard.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [28/Jun/2023:01:00:44 +0530] "GET /Student_Management_System/AdminLogin.jsp HTTP/1.1" 200 1197
+0:0:0:0:0:0:0:1 - - [28/Jun/2023:01:00:52 +0530] "GET /Student_Management_System/saveStudent.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [28/Jun/2023:01:00:52 +0530] "GET /Student_Management_System/AdminLogin.jsp HTTP/1.1" 200 1197
+0:0:0:0:0:0:0:1 - - [28/Jun/2023:01:01:00 +0530] "GET /Student_Management_System/UpdateStatement.jsp HTTP/1.1" 500 3062
+0:0:0:0:0:0:0:1 - - [28/Jun/2023:01:01:09 +0530] "GET /Student_Management_System/ViewStudents.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [28/Jun/2023:01:01:09 +0530] "GET /Student_Management_System/AdminLogin.jsp HTTP/1.1" 200 1197

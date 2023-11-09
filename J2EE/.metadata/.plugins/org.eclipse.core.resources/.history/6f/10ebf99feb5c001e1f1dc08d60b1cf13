@@ -1,0 +1,9 @@
+package com.ty.firstServlet;
+import java.io.IOException;
+
+import javax.servlet
+
+
+public class DemoServlet {
+
+}

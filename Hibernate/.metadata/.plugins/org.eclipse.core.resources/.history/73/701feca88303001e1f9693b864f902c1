@@ -1,0 +1,30 @@
+package org.jsp.oneToMany_uni.controller;
+
+import java.util.List;
+
+import org.jsp.oneToMany_uni.dao.FilpKart_Items_Dao;
+import org.jsp.oneToMany_uni.dto.Flipkart_Customer;
+import org.jsp.oneToMany_uni.dto.Items;
+
+public class Flipkart_Items_Controller {
+
+	public static void main(String[] args) {
+		Flipkart_Customer FC=new Flipkart_Customer();
+		FC.setId(1);
+		FC.setName("killer");
+		FC.setEmail("abc@gmail.com");
+		FC.setNumber(9429384938l);
+		
+		Items items=new Items();
+		items.setId(101);
+		items.setName("mobile");
+		items.setCost(8989);
+		items.setQuantity(3);
+		
+		FC.setItems((List<Items>) items);
+		
+		FilpKart_Items_Dao fid=new FilpKart_Items_Dao();
+		
+		fid.saveFlipkarCustomer(FC);
+	}
+}

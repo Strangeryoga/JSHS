@@ -1,0 +1,5 @@
+package org.jsp.manytoone_uni.dto;
+
+public class Employee {
+
+}

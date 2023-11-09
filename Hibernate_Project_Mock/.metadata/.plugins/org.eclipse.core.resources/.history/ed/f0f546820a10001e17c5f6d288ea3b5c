@@ -1,0 +1,13 @@
+package org.jsp.Company_Details.dto;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Address_dto {
+
+	private int id;
+	private long code;
+	private String state;
+	
+	
+}

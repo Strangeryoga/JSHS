@@ -1,0 +1,75 @@
+package com.example.demo.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.dto.Customer_dto;
+import com.example.demo.dto.Login;
+import com.example.demo.service.CustomerService;
+
+@RestController
+//@RequestMapping("/CD")
+public class LoginController {
+	
+	@Autowired
+	private CustomerService cs;
+	
+	Customer_dto customer;
+     Login login;
+
+	@RequestMapping(value="/login", method=RequestMethod.GET)
+	public String loginPage() {
+		return "login";
+	}
+	
+	@RequestMapping(value="/login", method=RequestMethod.POST)
+	public String CustomerD(ModelMap model,@RequestParam String loginId, @RequestParam String password) {
+		if(loginId.equals("test") && password.equals("test@123")) {
+			model.put("loginId",loginId);
+			return "details";
+		}
+		
+		model.put("wrong","Provide correct data");
+		return "login";
+	}
+	
+	
+	
+	@PostMapping("/loginMsg")
+	public String loginMsg(@RequestBody Login login) {
+		this.login=login;
+        return "Success login";
+		
+	}
+	
+	
+	@PostMapping("/detailsMsg")
+	public String postMsg(@RequestBody Customer_dto customer) {
+		this.customer=customer;
+		return "Customer loaded";
+	}
+	
+	@RequestMapping(value="/alldetails", method=RequestMethod.GET)
+	public List<Customer_dto> getCustomer(){
+		return this.cs.getAllCustomers();
+	}
+	
+	@PostMapping("addcustomer")
+	public Customer_dto addCustomer(Customer_dto customer) {
+		Customer_dto c=this.cs.addCustomer(customer);
+		return c;
+	}
+	
+	
+	
+	
+}

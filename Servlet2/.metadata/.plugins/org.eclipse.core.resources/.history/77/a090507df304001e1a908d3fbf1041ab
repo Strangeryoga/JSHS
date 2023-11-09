@@ -1,0 +1,11 @@
+package com.ty.s;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+@WebServlet("/lu")
+public class LU extends HttpServlet {
+	
+	
+
+}

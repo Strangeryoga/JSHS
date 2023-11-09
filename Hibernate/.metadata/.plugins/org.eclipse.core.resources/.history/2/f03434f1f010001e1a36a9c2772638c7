@@ -1,0 +1,18 @@
+package org.jsp.companyDetails.dto;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+
+@Entity
+public class Employee {
+
+	private int id;
+	private String name;
+	private String address;
+	
+	@ManyToOne(cascade = CascadeType.ALL)
+	private Company company;
+	
+}

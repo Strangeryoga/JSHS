@@ -1,0 +1,16 @@
+package com.example.demo.dto;
+
+public class Customer_dto {
+	
+	private String first_name;
+	private String last_nname;
+	private String street;
+	private String address;
+	private String city;
+	private String state;
+	private String email;
+	private String phone;
+	
+	
+
+}

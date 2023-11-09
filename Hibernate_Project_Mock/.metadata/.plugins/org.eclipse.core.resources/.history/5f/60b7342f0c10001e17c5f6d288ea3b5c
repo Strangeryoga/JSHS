@@ -1,0 +1,25 @@
+package org.jsp.Company_Details.dto;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+
+@Entity
+public class Computer_dto {
+
+	@Id
+	private int id;
+	private String brand;
+	private double price;
+	
+	@ManyToOne(cascade = CascadeType.ALL)
+	private Company_dto company;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	private Employee_dto employee;
+	
+	
+}

@@ -1,0 +1,29 @@
+package org.jsp.manytoone_uni.controller;
+
+import org.jsp.manytoone_uni.dao.Dept_Emp;
+import org.jsp.manytoone_uni.dto.Department;
+import org.jsp.manytoone_uni.dto.Employee;
+
+public class Dept_Emp_controller {
+
+	public static void main(String[] args) {
+		Department dept=new Department();
+		dept.setName("capgemini");
+		dept.setLoc("mumbai");
+		
+		Department dept1=new Department();
+		dept1.setName("tcs");
+		dept1.setLoc("uk");
+		
+		Employee emp=new Employee();
+		emp.setName("yogesh");
+		emp.setAddress("pune");
+		
+		dept.setEmployee(emp);
+		
+		Dept_Emp dao=new Dept_Emp();
+		dao.saveDept(dept);
+		
+		
+	}
+}

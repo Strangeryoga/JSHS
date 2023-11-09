@@ -1,0 +1,5 @@
+package org.jsp.spring_boot_user_app.controller;
+
+public class User_controller {
+
+}

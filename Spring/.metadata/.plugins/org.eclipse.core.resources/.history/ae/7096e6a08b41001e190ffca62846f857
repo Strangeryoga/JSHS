@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div>
+  
+  <h2>Success</h2>
+    <span>First Name:</span><span>${dt.first_name}</span><br/>
+    <span>Last Name:</span><span>${dt.last_nname}</span><br/>
+    <span>Address:</span><span>${dt.address}</span><br/>
+    <span>City:</span><span>${dt.city}</span><br/>
+    <span>State:</span><span>${dt.state}</span><br/>
+    <span>email:</span><span>${dt.email}</span><br/>
+    <span>phone:</span><span>${dt.phone}</span><br/>
+  
+  
+</div>
+
+</body>
+</html>

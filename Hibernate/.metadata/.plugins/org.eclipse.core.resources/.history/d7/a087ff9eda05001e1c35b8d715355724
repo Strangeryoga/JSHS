@@ -1,0 +1,52 @@
+package org.jp.onetomany_bi.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.jp.onetomany_bi.dao.Comp_Emp_Dao;
+import org.jp.onetomany_bi.dto.Company;
+import org.jp.onetomany_bi.dto.Employee;
+
+public class Comp_Emp_Controller {
+
+	public static void main(String[] args) {
+		
+		Company company=new Company();
+		company.setCid(105);
+		company.setCname("TCS");
+		company.setAddress("mumbai");
+		company.setEmail("tcs@gmail.com");
+		company.setMno(8293829l);
+		
+		Employee employee=new Employee();
+		employee.setEid(10011);
+		employee.setEname("Roshan");
+		employee.setSal(89348);
+		employee.setAddress("delhi");
+		employee.setCompany(company);
+		
+		Employee employee1=new Employee();
+		employee1.setEid(10012);
+		employee1.setEname("killer");
+		employee1.setSal(893483);
+		employee1.setAddress("mumbai");
+		employee1.setCompany(company);
+		
+		Employee employee2=new Employee();
+		employee2.setEid(10013);
+		employee2.setEname("stranger");
+		employee2.setSal(893483);
+		employee2.setAddress("uk");
+		employee2.setCompany(company);
+		
+		List<Employee> list=new ArrayList<Employee>();
+		list.add(employee);
+		list.add(employee1);
+		list.add(employee2);
+		company.setEmployees(list);
+		
+		Comp_Emp_Dao dao=new Comp_Emp_Dao();
+		dao.saveCompany(company);
+//		dao.saveEmployee(employee);
+	}
+}

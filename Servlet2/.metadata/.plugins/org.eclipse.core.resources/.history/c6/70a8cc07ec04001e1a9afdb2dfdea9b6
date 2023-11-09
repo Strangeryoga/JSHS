@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="NWA" method="get>
+<h1>Id</h1>
+<h2>Killer</h2> 
+<button>Hello</button>
+</form>
+</body>
+</html>

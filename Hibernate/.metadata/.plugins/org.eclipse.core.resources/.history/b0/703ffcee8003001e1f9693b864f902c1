@@ -1,0 +1,21 @@
+package org.jsp.oneToMany_uni.dto;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+
+@Entity
+public class Flipkart_Customer {
+
+	@Id
+	private int id;
+	private String name;
+	private String email;
+	private long number;
+	
+   @OneToMany(cascade=CascadeType.ALL)	
+    private List<Items> items;
+	
+}

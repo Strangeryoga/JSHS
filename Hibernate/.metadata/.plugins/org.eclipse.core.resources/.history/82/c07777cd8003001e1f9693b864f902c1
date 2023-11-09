@@ -1,0 +1,20 @@
+package org.jsp.oneToMany_uni.dto;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import antlr.collections.List;
+
+@Entity
+public class Flipkart_Customer {
+
+	@Id
+	private int id;
+	private String name;
+	private String email;
+	private long number;
+	
+   List<Items> items;
+	
+	
+}

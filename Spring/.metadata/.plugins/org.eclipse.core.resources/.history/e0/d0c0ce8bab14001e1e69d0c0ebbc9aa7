@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean id="myadhar" class="org.jsp.spring_ioc_container_setter_injector.Adhar">
+	
+	<constructor-arg name="eno" value="232"></constructor-arg>
+	<constructor-arg name="cc" value="1600cc"></constructor-arg>
+	
+	
+	</bean>
+	
+	<bean id="myperson" class="org.jsp.spring_ioc_container_setter_injector.Person"> 
+		<constructor-arg name="name" value="232"></constructor-arg>
+		<constructor-arg name="color" value="232"></constructor-arg>
+		<constructor-arg name="price" value="232"></constructor-arg>
+		<constructor-arg name="engine" ref="myengine"></constructor-arg>
+	
+	 </bean>
+
+</beans>
+

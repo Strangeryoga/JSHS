@@ -1,0 +1,9 @@
+package com.ty.s;
+
+import javax.servlet.annotation.WebServlet;
+
+@WebServlet("/su")
+
+public class SU {
+
+}

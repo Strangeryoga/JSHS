@@ -1,0 +1,10 @@
+package org.jsp.spring_ioc_container_setter_injector;
+
+public class Person {
+
+	private String name;
+	private String address;
+	private double mno;
+	
+	private Adhar adh;
+}

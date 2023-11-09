@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="reg">
+  <h1>Form</h1>
+  Name<input type="text" name="nm">
+  Mobile<input type="text" name="mn">
+  DOB<input type="date">
+  <input type="submit" value="reg">
+</form>
+
+</body>
+</html>

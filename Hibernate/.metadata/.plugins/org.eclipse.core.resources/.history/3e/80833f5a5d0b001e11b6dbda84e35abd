@@ -1,0 +1,15 @@
+package com.ty.manytomany_bi.controller;
+
+import com.ty.manytomany_bi.dto.Course;
+
+public class Student_Course_controller {
+	
+	public static void main(String[] args) {
+		
+		Course course=new Course();
+		course.setName("java");
+		course.setCost(238928);
+		course.setDuration(120);
+	}
+
+}

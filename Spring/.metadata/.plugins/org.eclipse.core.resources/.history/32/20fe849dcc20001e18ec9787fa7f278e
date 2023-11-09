@@ -1,0 +1,14 @@
+package org.jsp.spring_boot_user_app.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class User_controller {
+
+	@GetMapping("/my")
+	public String My() {
+		
+		return "My My ";
+	}
+}

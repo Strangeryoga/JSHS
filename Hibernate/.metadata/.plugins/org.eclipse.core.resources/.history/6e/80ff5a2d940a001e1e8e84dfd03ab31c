@@ -1,0 +1,5 @@
+package org.jsp.manytomany_uni.controller;
+
+public class Customer_Product_controller {
+
+}

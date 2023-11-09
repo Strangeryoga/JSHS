@@ -1,0 +1,23 @@
+package org.google.empApp;
+
+import java.io.IOException;
+
+import javax.servlet.GenericServlet;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+
+public class Employee extends GenericServlet {
+
+	@Override
+	public void service(ServletRequest req, ServletResponse resp) throws ServletException, IOException {
+		String id=req.getParameter("id");
+		String name=req.getParameter("nm");
+		String role=req.getParameter("rl");
+		String place=req.getParameter("pl");
+		
+		System.out.println("id is"+id+"name is"+name+"role is"+role+"place is "+place);
+
+	}
+
+}

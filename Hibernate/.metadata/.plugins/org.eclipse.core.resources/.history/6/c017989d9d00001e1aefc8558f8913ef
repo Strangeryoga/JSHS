@@ -1,0 +1,15 @@
+package org.jsp.onetoone_bi.dto;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Engine {
+
+	private int id;
+	private String cc;
+	
+	
+	
+	
+	
+}

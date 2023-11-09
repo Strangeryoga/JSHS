@@ -1,0 +1,27 @@
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/h1")
+public class hello extends HttpServlet {
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		
+		PrintWriter res=resp.getWriter();
+		res.print("hello welcome to my world");
+		RequestDispatcher r1=req.getRequestDispatcher("s1");
+		r1.forward(req, resp);
+		
+		
+		
+			}
+
+}

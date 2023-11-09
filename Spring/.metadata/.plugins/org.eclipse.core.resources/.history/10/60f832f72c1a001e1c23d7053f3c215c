@@ -1,0 +1,5 @@
+package org.jsp.spring_ioc_annotation_container_constructor_injector.animal;
+
+public class Dog implements Animal{
+
+}

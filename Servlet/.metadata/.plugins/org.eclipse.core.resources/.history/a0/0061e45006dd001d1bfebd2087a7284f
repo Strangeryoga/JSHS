@@ -1,0 +1,9 @@
+package com.ty.firstServlet;
+import javax.servlet;
+
+
+public class DemoServlet extends GenericServlet {
+	
+	
+
+}

@@ -1,0 +1,30 @@
+package com.example.demo.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class LoginController {
+
+	@RequestMapping(value="/login", method=RequestMethod.GET)
+	public String loginPage() {
+		return "login";
+	}
+	
+	@RequestMapping(value="/login", method=RequestMethod.POST)
+	public String CustomerD(ModelMap model,@RequestParam String loginId, @RequestParam String password) {
+		if(loginId.equals("test") && password.equals("test@123")) {
+			model.put("loginId",loginId);
+			return "details";
+		}
+		
+		model.put("wrong","Provide correct data");
+		return "login";
+	}
+	
+	
+	
+}

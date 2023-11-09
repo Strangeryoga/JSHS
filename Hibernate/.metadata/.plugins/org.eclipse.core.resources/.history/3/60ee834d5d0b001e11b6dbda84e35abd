@@ -1,0 +1,5 @@
+package com.ty.manytomany_bi.controller;
+
+public class Student_Course_controller {
+
+}

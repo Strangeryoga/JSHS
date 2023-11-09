@@ -1,0 +1,5 @@
+package org.google.stuFetch;
+
+public class Student {
+
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean id="myadhar" class="org.jsp.spring_ioc_container_setter_injector.Adhar">
+	
+	<property name="ano" value="829XXXXXX030"></property>
+	<property name="state" value="maharashtra"></property>
+	
+	
+	</bean>
+	
+	<bean id="myperson" class="org.jsp.spring_ioc_container_setter_injector.Person"> 
+		<property name="name" value="stranger"></property>
+				<property name="address" value="kalyan"></property>
+				<property name="mno" value="8982983"></property>
+				<property name="adh" ref="myadhar"></property>
+		
+	
+	 </bean>
+
+</beans>
+

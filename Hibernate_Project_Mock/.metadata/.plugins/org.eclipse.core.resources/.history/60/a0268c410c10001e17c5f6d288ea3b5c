@@ -1,0 +1,13 @@
+package org.jsp.Company_Details.dto;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Skills_dto {
+
+	@Id
+	private int id;
+	private String skill;
+	
+}

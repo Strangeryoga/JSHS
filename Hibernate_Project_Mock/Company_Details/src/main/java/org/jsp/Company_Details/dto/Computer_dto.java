@@ -1,0 +1,71 @@
+package org.jsp.Company_Details.dto;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+
+@Entity
+public class Computer_dto {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
+	private String brand;
+	private double price;
+	
+	
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn
+	private Company_dto company;
+	@OneToOne(cascade = CascadeType.ALL)
+	private Employee_dto employee;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getBrand() {
+		return brand;
+	}
+
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public Company_dto getCompany() {
+		return company;
+	}
+
+	public void setCompany(Company_dto company) {
+		this.company = company;
+	}
+
+	public Employee_dto getEmployee() {
+		return employee;
+	}
+
+	public void setEmployee(Employee_dto employee) {
+		this.employee = employee;
+	}
+	
+	
+	
+}

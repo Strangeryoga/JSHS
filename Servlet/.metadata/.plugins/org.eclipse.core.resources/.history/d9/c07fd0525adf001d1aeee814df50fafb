@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+Id:<input type="text">
+Name:<input type="text">
+Role:<input type="text">
+Place:<input type="text">
+<button>Send</button>
+</body>
+</html>

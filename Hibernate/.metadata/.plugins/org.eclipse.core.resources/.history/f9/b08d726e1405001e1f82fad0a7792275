@@ -1,0 +1,5 @@
+package org.jp.onetomany_bi.controller;
+
+public class Comp_Emp_Controller {
+
+}

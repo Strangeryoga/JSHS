@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>Login</h1>
+UserId<input type="text" name="ui">
+Password<input type="password" name="ps">
+
+</body>
+</html>

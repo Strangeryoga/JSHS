@@ -1,0 +1,36 @@
+package org.jsp.companyDetails.dao;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import org.jsp.companyDetails.dto.Company;
+import org.jsp.companyDetails.dto.Employee;
+
+public class CompanyDetails_dao {
+
+	EntityManagerFactory factory=Persistence.createEntityManagerFactory("map");
+	EntityManager manager=factory.createEntityManager();
+	EntityTransaction transaction=manager.getTransaction();
+	
+	public void saveCompany(Company company) {
+		transaction.begin();
+		manager.persist(company);
+		transaction.commit();
+	}
+	
+	public void updateCompany(Company comp) {
+		transaction.begin();
+		manager.merge(comp);
+		transaction.commit();
+	}
+	
+	public void updateEmployee(Employee employee) {
+		transaction.begin();
+		manager.merge(employee);
+		transaction.commit();
+	}
+	
+	
+}

@@ -1,0 +1,69 @@
+package org.jsp.manytoone_uni.dao;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import org.jsp.manytoone_uni.dto.Department;
+import org.jsp.manytoone_uni.dto.Employee;
+
+public class Dept_Emp {
+
+	private EntityManagerFactory factory=null;
+	private EntityManager manager=null;
+	private EntityTransaction transaction=null;
+	
+	public EntityManager getEntityManager() {
+		factory= Persistence.createEntityManagerFactory("s2");
+		manager=factory.createEntityManager();
+		
+		return manager;
+	}
+	
+	public void saveDept(Department dept) {
+		
+		manager=getEntityManager();
+		transaction=manager.getTransaction();
+		transaction.begin();
+		manager.persist(dept);
+		transaction.commit();
+		
+	}
+	
+	public void updateDept(Department dept) {
+		manager=getEntityManager();
+		transaction=manager.getTransaction();
+		transaction.begin();
+		manager.merge(dept);
+		transaction.commit();
+	}
+	
+	public void addDept(int id, Department department) {
+		Employee employee=manager.find(Employee.class, id);
+		department.setEmployee(employee);
+		
+		transaction.begin();
+		manager.merge(department);
+		transaction.commit();	
+		
+	}
+	
+	public void deleteDepartment(int id) {
+		Department department =manager.find(Department.class, id);
+		department.setEmployee(null);
+		
+		transaction.begin();
+		manager.merge(department);
+		transaction.commit();
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,44 @@
+package com.example.demo.service;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.stereotype.Component;
+
+import com.example.demo.dto.Customer_dto;
+
+@Component
+public class CustomerService {
+
+	private static List<Customer_dto> list=new ArrayList<>();
+	private static Map<Long,Customer_dto> map=new HashMap<>();
+	private static Long index=1L;
+	
+	static {
+		list.add(new Customer_dto(1L,"Jane","Doe","Elvnu Street","H no 2","Delhi","Delhi","sam@gmail.com","323233323"));
+	}
+	
+	//get customers
+//	public List<Customer_dto> getAllCustomers(){
+//		return list;
+//	}
+	
+	public static List<Customer_dto> getAllCustomers(){
+		return new ArrayList<>(map.values());
+	}
+	
+	//adding the customer
+	public Customer_dto addCustomer(Customer_dto c) {
+		
+		list.add(c);
+		return c;
+	}
+	
+	
+	
+	
+	
+	
+}

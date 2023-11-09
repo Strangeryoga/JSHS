@@ -1,0 +1,18 @@
+package org.jsp.spring_ioc_container_constructor_injecter;
+
+public class Engine {
+	
+	int eno;
+	String cc;
+	public Engine(int eno, String cc) {
+		super();
+		this.eno = eno;
+		this.cc = cc;
+	}
+	
+	public void EngineDetails() {
+		System.out.println(eno);
+		System.out.println(cc);
+	}
+
+}

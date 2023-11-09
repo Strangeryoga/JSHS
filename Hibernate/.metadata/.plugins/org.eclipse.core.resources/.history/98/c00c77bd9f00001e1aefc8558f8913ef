@@ -1,0 +1,23 @@
+package org.jsp.onetoone_bi.controller;
+
+import org.jsp.onetoone_bi.dto.Car;
+import org.jsp.onetoone_bi.dto.Engine;
+
+public class Car_Eng_Controller {
+
+	public static void main(String[] args) {
+		Engine engine=new Engine();
+		engine.setId(1);
+		engine.setCc("1060cc");
+		
+		Car car=new Car();
+		car.setId(1006);
+		car.setName("xuv");
+		car.setColor("black");
+		car.setPrice(323242);
+		
+		
+		
+		engine.setC(car);
+	}
+}

@@ -1,0 +1,5 @@
+package org.jsp.companyDetails.dao;
+
+public class CompanyDetails_dao {
+
+}

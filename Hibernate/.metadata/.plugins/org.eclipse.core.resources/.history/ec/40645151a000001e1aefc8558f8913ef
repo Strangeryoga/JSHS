@@ -1,0 +1,43 @@
+package org.jsp.onetoone_bi.dto;
+
+import javax.persistence.Entity;
+
+
+public class Engine {
+
+	private int id;
+	private String cc;
+	
+	private Car c;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getCc() {
+		return cc;
+	}
+
+	public void setCc(String cc) {
+		this.cc = cc;
+	}
+
+	public Car getC() {
+		return c;
+	}
+
+	public void setC(Car c) {
+		this.c = c;
+	}
+	
+	
+	
+	
+	
+	
+	
+}

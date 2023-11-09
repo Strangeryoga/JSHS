@@ -1,0 +1,5 @@
+package com.ty.manytomany_bi.dto;
+
+public class Student {
+
+}

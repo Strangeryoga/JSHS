@@ -1,0 +1,37 @@
+package com.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/reg")
+public class NewServlet extends HttpServlet{
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		PrintWriter pw=res.getWriter();
+		
+		res.setContentType("text/html");
+		
+		String name=req.getParameter("nm");
+		String mno=req.getParameter("mn");
+		String date=req.getParameter("db");
+		
+		System.out.println("name: "+name);
+		System.out.println("mno: "+mno);
+		System.out.println("date: "+date);
+
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		super.doPost(req, resp);
+	}
+
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form action="su" method="get">
+
+Username<input type="text" name="us">
+Password<input type="password" name="ps">
+Email<input type="email" name="em">
+No<input type="number" name="no">
+<button>Login</button>
+</form>
+
+</body>
+</html>

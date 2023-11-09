@@ -1,0 +1,8 @@
+package org.jsp.spring_boot_demo_app.controller;
+
+public class Demo_Controller {
+
+	public String getMsg() {
+		return "hello I am getMsg()";
+	}
+}

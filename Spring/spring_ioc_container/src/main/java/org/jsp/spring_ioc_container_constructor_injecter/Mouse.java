@@ -1,0 +1,21 @@
+package org.jsp.spring_ioc_container_constructor_injecter;
+
+public class Mouse {
+
+	String brand;
+	String type;
+	double price;
+	public Mouse(String brand, String type, double price) {
+		super();
+		this.brand = brand;
+		this.type = type;
+		this.price = price;
+	}
+	
+	public void detail() {
+		System.out.println(brand);
+		System.out.println(type);
+		System.out.println(price);
+	}
+}
+

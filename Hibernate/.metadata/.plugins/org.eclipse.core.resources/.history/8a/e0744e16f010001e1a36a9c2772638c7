@@ -1,0 +1,5 @@
+package org.jsp.companyDetails.dto;
+
+public class Address {
+
+}

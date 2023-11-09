@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+Name: <input type="text"><br>
+Place: <input type="text"><br>
+Country: <input type="text"><br>
+
+</body>
+</html>

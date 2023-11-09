@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form action="lu" method="get">
+
+Username<input type="text" name="un">
+Password<input type="text" name="ps">
+<button>Login</button>
+
+
+
+</form>
+
+<form action="ul" method="post">
+<button>sign in</button>
+</form>
+
+
+</body>
+</html>

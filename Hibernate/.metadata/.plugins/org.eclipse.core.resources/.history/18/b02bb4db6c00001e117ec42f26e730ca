@@ -1,0 +1,13 @@
+package org.jsp.onetoone_bi.dto;
+
+@Entity
+public class Car {
+
+	@Id
+	private int id;
+	private String name;
+	private String color;
+	double price;
+	
+	
+}
