@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--    it will scan the whole package for beans-->
+<!--    <context:component-scan base-package="com.stranger"></context:component-scan>-->
+
+<!--    <bean id="doctor" class="com.stranger.Doctor">-->
+
+<!--        &lt;!&ndash; getter and setter injecter &ndash;&gt; -->
+<!--&lt;!&ndash;        <property name="qualification" value="MBBS"></property>&ndash;&gt;-->
+
+<!--        &lt;!&ndash; constructor injecter &ndash;&gt;-->
+<!--        <constructor-arg value="MBBS"></constructor-arg>-->
+<!--    </bean>-->
+<!--    <bean id="nurse" class="com.stranger.Nurse"></bean>-->
+
+</beans>
