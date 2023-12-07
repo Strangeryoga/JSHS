@@ -17,8 +17,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet("/lu")
-public class LU extends HttpServlet {
+@WebServlet("/log")
+public class login extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -28,8 +28,8 @@ public class LU extends HttpServlet {
 		RequestDispatcher dispatcher=null;
 		PrintWriter out=resp.getWriter();
 		
-		String uname=req.getParameter("un");
-		String upwd=req.getParameter("ps");
+		String uemail=req.getParameter("em");
+		String upass=req.getParameter("ps");
 
 		
 		try{
@@ -39,7 +39,7 @@ public class LU extends HttpServlet {
 			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306?user=root&password=root");
 			System.out.println("connection establish");
 //			
-			String sql=("select * from info1.form where uname= '"+uname+"' and upwd='"+upwd+"'");
+			String sql=("select * from info1.form2 where uemail= '"+uemail+"' and upass='"+upass+"'");
 //			
 			
 			Statement st=con.createStatement();
@@ -50,10 +50,10 @@ public class LU extends HttpServlet {
 			if(rs.next()) {
 				resp.sendRedirect("index.html");
 
-			 out.print(uname+"<h1>Welcome</h1>");
+			 out.print(uemail+"<h1>Welcome</h1>");
 			 }else {
 				 out.print("<h1>Failed</h1>");
-				 resp.sendRedirect("new1.html");
+				 resp.sendRedirect("login.html");
 			 }
 			
 		}

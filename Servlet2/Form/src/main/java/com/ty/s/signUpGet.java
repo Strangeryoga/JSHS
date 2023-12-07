@@ -10,12 +10,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/ul")
-public class SU1 extends HttpServlet {
+@WebServlet("/sug")
+public class signUpGet extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		RequestDispatcher rd= req.getRequestDispatcher("new.html");
+		RequestDispatcher rd= req.getRequestDispatcher("signup.html");
 		rd.include(req, resp);
 	}
 
